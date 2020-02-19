@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#437BD3</color>
+    <color name="colorPrimaryDark">#427CD1</color>
+    <color name="colorAccent">#888787</color>
+    <color name="colorPrimaryLight">#B2EBF2</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#888787</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="darkblue">#f0d78c</color>
+    <color name="white">#ffffff</color>
+    <color name="lightwhite">#e8e8e8</color>
+    <color name="buttoncolor">#5d5d5d</color>
+    <color name="colorred">#FF0000</color>
+    <color name="cotravRed">#FF4444</color>
+    <color name="cotravBackggroundGray">#f0f0f0</color>
+    <color name="colordark">#5656ab</color>
+    <color name="color_icon">#FF949494</color>
+    <color name="colorgreen">#00c851</color>
+    <color name="cotravTabColorDarkblue">#427CD1</color>
+    <color name="cotravTabColor_one">#51A2D5</color>
+    <color name="cotravTabColor_two">#303030</color>
+    <color name="cotravTabColor_three">#303030</color>
+    <color name="cotravTabColorDarkBlack">#303030</color>
+    <color name="cotravTabColorfirst">#0bacff</color>
+    <color name="colorProfile_backround">#89ABE3FF</color>
+    <color name="pickup">#8cff96</color>
+    <color name="drop">#c9684b</color>
+    <color name="cotravsuccess">#00c851</color>
+    <color name="cotravCancel">#FF4444</color>
+</resources>

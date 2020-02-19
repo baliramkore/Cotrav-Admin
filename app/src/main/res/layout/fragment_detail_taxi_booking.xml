@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.taxi.taxi_fragments.DetailTaxiBookingFragment">
+
+    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+</FrameLayout>-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cotravBackggroundGray"
+    tools:context=".ui.home.taxi.taxi_fragments.DetailTaxiBookingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/cotravBackggroundGray"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightwhite"
+                    card_view:cardCornerRadius="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:elevation="3dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/basic_detail_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Basic details"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            style="@style/Label1"
+                            android:textColor="@color/white"
+                            android:background="@color/colorPrimary"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/refrence_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textIsSelectable="true"
+                                style="@style/Label1"/>
+
+                            <TextView
+                                android:id="@+id/booking_status"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="viewEnd"
+                                android:padding="2dp"
+                                android:layout_marginRight="10dp"
+                                android:text=""
+                                android:textIsSelectable="true"
+                                style="@style/Label2"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+
+                        <View
+                            style="@style/Divider"
+                            android:layout_width="match_parent"
+                            />
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Tour Type: "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tour_type"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Assesment Code: "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/assesment_code"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Assesment City: "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/assesment_city"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text="Booking Date: "
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/booking_date"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Booking Reason: "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/booking_reason"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:background="@drawable/circle_view"
+                                    android:backgroundTint="#c9684b" />
+
+                                <TextView
+                                    android:id="@+id/pickup_time"
+                                    android:layout_width="105dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="- - : - -   "
+                                    style="@style/Time"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginLeft="20dp"/>
+                                <TextView
+                                    android:id="@+id/pickup_city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Heading"
+                                    android:text="NA"
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp">
+                                <TextView
+                                    android:id="@+id/pickup_date"
+                                    android:layout_width="105dp"
+                                    style="@style/NormalText"
+                                    android:layout_height="wrap_content"
+                                    android:text="- -   - - -   - - - -" />
+                                <TextView
+                                    android:id="@+id/pickup_boardingpoint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/NormalText"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+
+                                    android:layout_gravity="center"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:background="@drawable/circle_view"
+                                    android:backgroundTint="#8cff96" />
+
+                                <TextView
+                                    android:id="@+id/drop_time"
+                                    android:layout_width="105dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="- - : - -   "
+                                    style="@style/Time"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginLeft="20dp"/>
+                                <TextView
+                                    android:id="@+id/drop_city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="NA"
+                                    style="@style/Heading"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp">
+                                <TextView
+                                    android:id="@+id/drop_date"
+                                    android:layout_width="105dp"
+                                    style="@style/NormalText"
+                                    android:layout_height="wrap_content"
+                                    android:text="- -   - - -   - - - -" />
+                                <TextView
+                                    android:id="@+id/drop_city_endpoint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/NormalText"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/Divider"
+                            android:layout_width="match_parent"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightwhite"
+                    card_view:cardCornerRadius="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:elevation="3dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/spoc_detail_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Spoc details"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            style="@style/Label1"
+                            android:textColor="@color/white"
+                            android:background="@color/colorPrimary"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Spoc Name : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/spoc_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Spoc Contact No : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/spoc_contact"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Spoc Email : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/spoc_email"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            style="@style/Divider"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/passenger_lay"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightwhite"
+                    card_view:cardCornerRadius="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:elevation="3dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/Passengers_Details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical" >
+
+                        <!-- #47B4F1 -->
+
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            android:textIsSelectable="true"
+                            android:text="Passengers Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:layout_width="165dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:padding="2dp"
+                                android:text="Number of Passengers"
+                                android:textIsSelectable="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp" />
+
+                            <TextView
+                                android:id="@+id/no_of_emp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:padding="2dp"
+                                android:text=""
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/passengersListLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            style="@style/Divider"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightwhite"
+                    card_view:cardCornerRadius="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:elevation="3dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/driver_detail_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Driver details"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            android:textSize="16sp"
+                            style="@style/Label1"
+                            android:textColor="@color/white"
+                            android:background="@color/colorPrimary"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Driver Name : "
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                style="@style/Label2"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/driver_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="NA"
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Driver Con. No : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/driver_contact"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="NA"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Driver Email : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/driver_email"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text="NA"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            style="@style/Divider"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightwhite"
+                    card_view:cardCornerRadius="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:elevation="3dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/taxi_detail_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Taxi details"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            style="@style/Label1"
+                            android:textColor="@color/white"
+                            android:background="@color/colorPrimary"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Taxi Type : "
+                                style="@style/Label2"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/taxi_type"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Taxi model : "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/taxi_model"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                style="@style/Label2"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Taxi Reg no: "
+                                android:textStyle="bold"
+                                style="@style/Label2"
+                                android:textColor="@android:color/black"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/taxi_reg_no"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text=""
+                                style="@style/Label2"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textIsSelectable="true"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            style="@style/Divider"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar_bookingDetails"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>

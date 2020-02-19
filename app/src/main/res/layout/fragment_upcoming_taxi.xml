@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="orientation|screenSize"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="80dp"
+                android:elevation="3dp"
+                android:id="@+id/error_empty_layout"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/no_booking_connection_error"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:textColor="#ff3300"
+                    android:layout_height="40dp"
+                    android:textSize="14sp"
+                    android:text="No Bookings Available"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fab_add_taxi"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom|end"
+         android:backgroundTint="@color/colorPrimary"
+         android:layout_margin="20dp"
+         android:src="@drawable/outline_add" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

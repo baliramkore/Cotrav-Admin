@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_radio"
+        android:icon="@drawable/radio_taxi"
+        android:title="Radio" />
+
+    <item
+        android:id="@+id/navigation_local"
+        android:icon="@drawable/local_taxi"
+        android:title="Local" />
+
+
+    <item
+        android:id="@+id/navigation_outstation"
+        android:icon="@drawable/outstaion_taxi"
+        android:title="Outstation" />
+
+</menu>

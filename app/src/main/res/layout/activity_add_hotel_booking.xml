@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.hotel.AddHotelBookingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme"
+            >
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Form">
+
+            <LinearLayout
+                android:background="@color/lightwhite"
+                android:layout_width="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spoc_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:layout_below="@+id/select_ass"
+                        android:layout_toRightOf="@+id/cityimg"
+                        android:layout_marginTop="5dp"/>
+
+                    <View
+                        style="@style/Divider"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        />
+                    <TextView
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select City"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/fromCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:orientation="vertical">
+
+
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/city_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:textSize="14dp"
+                                android:hint="Assessment Code"
+                                android:layout_below="@+id/select_ass"
+                                android:layout_toRightOf="@+id/cityimg"
+                                android:layout_marginTop="5dp"/>
+
+                            <View
+                                style="@style/Divider"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fromCity"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/standard_10"
+                            >
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Preferred Area"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorPrimary"
+                                />
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:id="@+id/pref_area"
+                                android:outlineSpotShadowColor="@color/colorPrimary"
+                                android:shadowColor="@color/white"
+                                android:textColorHighlight="@color/colorPrimary"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:textSize="16sp"
+                                android:hint=" "
+                                android:textColorHint="@color/colorPrimary"
+                                />
+                            <View
+                                style="@style/Divider"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                />
+                            <!--<View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/white"
+                                android:id="@+id/pickup_divider"
+                                android:layout_below="@+id/bus_pickup"/>-->
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nextLyout"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_date"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            />
+                        <ImageView
+                            android:id="@+id/dateimg"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_date_range_cotrav_24dp"
+                            android:layout_below="@+id/select_date"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/checkin_date"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:hint="Check-in Date"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="14sp"
+                            android:text=""
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/dateimg"
+                            android:layout_toRightOf="@+id/dateimg"
+                            android:layout_below="@+id/select_date"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/dateimg"
+                            android:layout_below="@+id/checkin_date"/>
+                        <ImageView
+                            android:id="@+id/time_from_img"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_access_time_cotrav_24dp"
+                            android:layout_below="@+id/select_date"
+                            android:layout_toLeftOf="@+id/checkin_time"/>
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/checkin_time"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:hint="Check-in Time"
+                            android:text="12:00:00"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/select_date"
+
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/time_from_img"
+                            android:layout_below="@+id/checkin_time"/>
+                        <ImageView
+                            android:id="@+id/dateimg2"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_date_range_cotrav_24dp"
+                            android:layout_below="@+id/dateimg"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/checkout_date"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:text=""
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:hint="Check-out Date"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="14sp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toEndOf="@+id/dateimg2"
+                            android:layout_toRightOf="@+id/dateimg2"
+                            android:layout_below="@+id/checkin_time"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/dateimg"
+                            android:layout_below="@+id/checkout_date"/>
+
+                        <ImageView
+                            android:id="@+id/time_from_img2"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_access_time_cotrav_24dp"
+                            android:layout_below="@+id/time_from_img"
+                            android:layout_toLeftOf="@+id/checkin_time"/>
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/checkout_time"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:hint="Check-out Time"
+                            android:text="12:00:00"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@+id/checkin_time"
+
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/time_from_img2"
+                            android:layout_below="@+id/checkout_time"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/assessment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_ass"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Assesment"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/cityimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_offices_buildings"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/select_ass"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:textSize="14dp"
+                            android:id="@+id/assessment_city"
+                            android:layout_below="@+id/select_ass"
+                            android:layout_toRightOf="@+id/cityimg"
+                            android:layout_marginTop="5dp"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/cityimg"
+                            android:layout_below="@+id/assessment_city"/>
+                        <ImageView
+                            android:id="@+id/asscodemig"
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:src="@drawable/ic_list_cotrav_24dp"
+                            android:layout_below="@+id/select_ass"
+                            android:layout_toLeftOf="@+id/assessnment_code"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:textSize="14dp"
+                            android:gravity="right"
+                            android:layout_gravity="right"
+                            android:hint="Assessment Code"
+                            android:id="@+id/assessnment_code"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/select_ass"/>
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/asscodemig"
+                            android:layout_below="@+id/assessnment_code"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pref_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_pref"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select preferrence"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/roomimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_one"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/select_pref"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="135dp"
+                            android:layout_height="35dp"
+                            android:textSize="14sp"
+                            android:id="@+id/room_type"
+                            android:layout_below="@+id/select_pref"
+                            android:layout_toRightOf="@+id/roomimg"
+                            android:layout_marginTop="5dp"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="135dp"
+                            android:layout_toRightOf="@id/roomimg"
+                            android:layout_below="@+id/room_type"/>
+                        <ImageView
+                            android:id="@+id/hotel_typeimg"
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:src="@drawable/ic_list_cotrav_24dp"
+                            android:layout_below="@+id/select_pref"
+                            android:layout_toLeftOf="@+id/hotel_type"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:textSize="14sp"
+                            android:id="@+id/hotel_type"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/select_pref"/>
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/hotel_typeimg"
+                            android:layout_below="@+id/hotel_type"/>
+
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/roomimg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_two"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/room_type"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="135dp"
+                            android:layout_height="35dp"
+                            android:textSize="14sp"
+                            android:id="@+id/room_type2"
+                            android:layout_below="@+id/room_type"
+                            android:layout_toRightOf="@+id/roomimg2"
+                            android:layout_marginTop="5dp"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="135dp"
+                            android:layout_toRightOf="@id/roomimg2"
+                            android:layout_below="@+id/room_type2"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/taxi_preference_lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/billing_pref"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Billing Pref"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/taxi_type_img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_taxi_type"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/billing_pref"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:textSize="14dp"
+                            android:id="@+id/billing_entity"
+                            android:layout_below="@+id/billing_pref"
+                            android:layout_toRightOf="@+id/taxi_type_img1"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/taxi_type_img1" />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/taxi_type_img1"
+                            android:layout_below="@+id/billing_entity"/>
+                        <ImageView
+                            android:id="@+id/taxi_no_img1"
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:src="@drawable/ic_rupee"
+                            android:layout_below="@+id/billing_pref"
+                            android:layout_toLeftOf="@+id/local_pessangers"
+                            android:layout_toStartOf="@+id/local_pessangers" />
+
+                        <TextView
+                            android:id="@+id/local_pessangers"
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:text="Passengers"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/billing_pref"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/local_pessangers"/>
+
+                    </RelativeLayout>
+
+
+                    <EditText
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/prefered_hotel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Prefered Hotel"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="@color/colorPrimaryText"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/booking_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:hint="Reason of Booking"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="@color/colorPrimaryText"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+
+
+                    <Button
+                        android:id="@+id/submit_btn"
+                        android:layout_marginTop="35dp"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:textColor="@color/white"
+                        android:text="Submit"
+                        android:fontFamily="@font/montserrat"
+                        android:elevation="6dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>
+</LinearLayout>

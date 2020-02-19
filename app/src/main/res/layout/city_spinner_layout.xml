@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorPrimaryText"
+    android:textSize="10sp"
+    android:paddingLeft="10dp"
+    android:paddingRight="@dimen/standard_30"
+    android:text="New Text"
+    android:id="@+id/textView9"
+    android:fontFamily="@font/montserrat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingEnd="@dimen/standard_30"
+    style="@style/Label1"
+    android:paddingStart="10dp" />
+

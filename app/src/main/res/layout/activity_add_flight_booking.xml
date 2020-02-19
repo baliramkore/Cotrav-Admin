@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.flight.AddFlightBookingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme"
+            >
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightwhite"
+
+            tools:context=".Form">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:background="@drawable/cotrav_background"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/one_way"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:text="ONE WAY"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/round_corner_transparent"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <Button
+                            android:id="@+id/round_trip"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:text="Round Trip"
+                            android:background="@drawable/round_corner_transparent"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:id="@+id/fromCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="30dp">
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="From"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:id="@+id/from_city"
+                                android:windowSoftInputMode="adjustPan|adjustResize"
+                                android:outlineSpotShadowColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:textColorHighlight="@color/white"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="bottom"
+                                android:textSize="16sp"/>
+
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:padding="-5dp"
+                            android:id="@+id/trip_type_img"
+                            android:background="@drawable/ic_one_way"
+                            android:layout_gravity="center"
+                            android:foregroundGravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:id="@+id/toCityalyout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_below="@+id/fromCity"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginStart="30dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="To"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:fontFamily="@font/montserrat"
+                                android:id="@+id/to_city"
+                                android:outlineSpotShadowColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:textColorHighlight="@color/white"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="bottom"
+                                android:textSize="16sp"/>
+                            <!--<fragment
+                                android:outlineSpotShadowColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:textColorHighlight="@color/white"
+                                android:backgroundTint="@color/white"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:textSize="16sp"
+                                android:id="@+id/place_autocomplete_fragment"
+                                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                                />-->
+                            <!--  <View
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="1dp"
+                                  android:background="@color/white"
+                                  android:layout_below="@+id/flight_pickup"/>-->
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nextLyout"
+                    android:padding="20dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spoc_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:layout_below="@+id/select_ass"
+                        android:layout_toRightOf="@+id/cityimg"
+                        android:layout_marginTop="5dp"/>
+
+                    <View
+                        style="@style/Divider"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        />
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_date"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            />
+                        <ImageView
+                            android:id="@+id/dateimg"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_date_range_cotrav_24dp"
+                            android:layout_below="@+id/select_date"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/journey_date"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:hint="Select Date"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/dateimg"
+                            android:layout_toRightOf="@+id/dateimg"
+                            android:layout_below="@+id/select_date"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/dateimg"
+                            android:layout_below="@+id/journey_date"/>
+                        <ImageView
+                            android:id="@+id/time_from_img"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_access_time_cotrav_24dp"
+                            android:layout_below="@+id/select_date"
+                            android:layout_toLeftOf="@+id/journey_time"/>
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/journey_time"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimaryText"
+                            android:hint="Select Time"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/select_date"
+
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/time_from_img"
+                            android:layout_below="@+id/journey_date"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/return_datetime_lay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/select_return_date"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/standard_10"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Return Date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            />
+                        <ImageView
+                            android:id="@+id/dateimg1"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_date_range_cotrav_24dp"
+                            android:layout_below="@+id/select_return_date"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+
+                        <TextView
+                            android:id="@+id/return_date"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/select_return_date"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/dateimg1"
+                            android:layout_toRightOf="@+id/dateimg1"
+                            android:fontFamily="@font/montserrat"
+                            android:hint="Select Date"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:textSize="14sp" />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/dateimg1"
+                            android:layout_below="@+id/return_date"/>
+                        <ImageView
+                            android:id="@+id/time_from_img1"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_access_time_cotrav_24dp"
+                            android:layout_below="@+id/select_return_date"
+                            android:layout_toLeftOf="@+id/return_time"/>
+
+                        <TextView
+                            android:id="@+id/return_time"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/select_return_date"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_vertical"
+                            android:hint="Select Time"
+                            android:paddingLeft="@dimen/standard_10"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorPrimaryText"
+                            android:textSize="14sp"
+
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/time_from_img1"
+                            android:layout_below="@+id/return_date"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/assessment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_ass"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Assesment"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/cityimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_list_cotrav_24dp"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/select_ass"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/assessment_code"
+                            android:layout_below="@+id/select_ass"
+                            android:layout_toRightOf="@+id/cityimg"
+                            android:layout_marginTop="5dp"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/cityimg"
+                            android:layout_below="@+id/assessment_code"/>
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/cityimg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_offices_buildings"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_below="@+id/select_ass"
+                            android:layout_toLeftOf="@+id/assessment_city"
+                            />
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/assessment_city"
+                            android:layout_width="135dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/select_ass"
+                            android:layout_alignParentRight="true"                            android:layout_marginTop="5dp"
+
+                            android:layout_alignParentEnd="true" />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="135dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/assessment_city"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/usage_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/select_usage"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Usage"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:layout_toRightOf="@+id/cityimg1"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/cityimg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_offices_buildings"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/select_usage"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/usage_type"
+                            android:layout_below="@+id/select_usage"
+                            android:layout_toRightOf="@+id/cityimg1"
+                            android:layout_marginTop="5dp"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/cityimg1"
+                            android:layout_below="@+id/usage_type"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/taxi_preference_lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/billing_pref"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Billing Pref"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <ImageView
+                            android:layout_gravity="bottom"
+                            android:id="@+id/taxi_type_img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_taxi_type"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/billing_pref"
+                            />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:textSize="14dp"
+                            android:id="@+id/billing_entity"
+                            android:layout_below="@+id/billing_pref"
+                            android:layout_toRightOf="@+id/taxi_type_img1"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/taxi_type_img1" />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+                            android:layout_toRightOf="@id/taxi_type_img1"
+                            android:layout_below="@+id/billing_entity"/>
+                        <ImageView
+                            android:id="@+id/taxi_no_img1"
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:src="@drawable/ic_rupee"
+                            android:layout_below="@+id/billing_pref"
+                            android:layout_toLeftOf="@+id/local_pessangers"
+                            android:layout_toStartOf="@+id/local_pessangers" />
+
+                        <TextView
+                            android:id="@+id/local_pessangers"
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:text="Passengers"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/billing_pref"
+                            />
+                        <View
+                            style="@style/Divider"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="125dp"
+
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/local_pessangers"/>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/select_class"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="@dimen/standard_10"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Class"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/standard_10"
+                        android:paddingLeft="@dimen/standard_10"
+                        >
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/economy_calss"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:text="Economy"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/round_corner_lightwhite_background"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/prem_economy_class"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+
+                            android:layout_height="50dp"
+                            android:gravity="center"                            android:text="Premium Economy"
+                            android:background="@drawable/round_corner_lightwhite_background"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:id="@+id/business_class"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_corner_lightwhite_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"                            android:text="Business"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+                    <EditText
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/booking_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:hint="Reason of Booking"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="@color/colorPrimaryText"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <EditText
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/prefered_flight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Prefered Flight"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="@color/colorPrimaryText"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+
+                    <Button
+                        android:id="@+id/submit_btn"
+                        android:layout_marginTop="35dp"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:textColor="@color/white"
+                        android:text="Submit"
+                        android:elevation="6dp"
+                        android:backgroundTint="@color/colorPrimaryDark" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>
+</LinearLayout>

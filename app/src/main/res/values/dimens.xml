@@ -1,0 +1,25 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="standard_55">55dp</dimen>
+    <dimen name="standard_105">105dp</dimen>
+    <dimen name="standard_125">125dp</dimen>
+    <dimen name="standard_155">155dp</dimen>
+    <dimen name="standard_75">75dp</dimen>
+    <dimen name="standard_10">10dp</dimen>
+    <dimen name="standard_30">30dp</dimen>
+    <dimen name="elevation">2dp</dimen>
+
+    <!-- Booking Form -->
+    <dimen name="text_size">12sp</dimen>
+    <dimen name="padding_size">10dp</dimen>
+    <!-- FAB -->
+    <dimen name="fab_big">54dp</dimen>
+    <dimen name="fab_small">40dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+</resources>

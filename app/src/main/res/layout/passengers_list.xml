@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/passenger_name"
+        android:paddingLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label1"
+        android:text="Shareyash pattewar"
+        />
+    <LinearLayout
+        android:paddingLeft="@dimen/standard_10"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/standard_30"
+            android:layout_height="match_parent"
+            android:src="@drawable/email"/>
+        <TextView
+            android:id="@+id/passemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/NormalText"
+            android:paddingLeft="@dimen/standard_10"
+            android:layout_gravity="center_vertical"
+            android:text=" shreyash@taxivaxi.in"
+            />
+        <ImageView
+            android:layout_width="@dimen/standard_30"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_contact"/>
+        <TextView
+            android:id="@+id/passcon"
+            android:paddingLeft="@dimen/standard_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/NormalText"
+            android:layout_gravity="center_vertical"
+            android:text="8767643654"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

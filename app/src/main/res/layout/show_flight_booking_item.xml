@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightwhite"
+        card_view:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        >
+        <LinearLayout
+            android:id="@+id/lay_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/refrence_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    style="@style/Label1"/>
+
+                <TextView
+                    android:id="@+id/booking_status"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    style="@style/Label2"
+                    android:gravity="end" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/booking_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:textIsSelectable="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start" style="@style/Label2" />
+                <TextView
+                    android:id="@+id/tour_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="end" style="@style/Label2"/>
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Emp. Name :"
+                    android:textStyle="bold"
+                    android:textIsSelectable="true"
+                    style="@style/Label2"/>
+
+                <TextView
+                    android:id="@+id/spoc_name"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryText"
+                    android:textIsSelectable="true"
+                    style="@style/Label2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    android:paddingRight="@dimen/standard_10"
+                    android:paddingLeft="@dimen/standard_10">
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/circle_view"
+                            android:backgroundTint="#c9684b" />
+
+
+                        <TextView
+                            android:id="@+id/pickup_city"
+                            style="@style/Heading"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="NA"
+                            android:layout_marginLeft="10dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/pickup_boardingpoint"
+                            style="@style/NormalText"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NA"
+                            android:layout_marginLeft="10dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/circle_view"
+                            android:backgroundTint="#8cff96" />
+
+                        <TextView
+                            android:id="@+id/drop_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="NA"
+                            style="@style/Heading"
+                            android:layout_marginLeft="10dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/drop_droping_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NA"
+                            android:layout_marginStart="10dp"
+                            style="@style/NormalText"
+                            android:layout_marginLeft="10dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imv_call"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/phonecall"
+
+                        />
+                    <ImageView
+                        android:id="@+id/imageDetails"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/deatils_icon"
+
+                        />
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imv_cancel"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:src="@drawable/icon_cancel"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

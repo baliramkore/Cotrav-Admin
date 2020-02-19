@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.employee_info.EmployeeInfo">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.taxivaxi.spoc.BookingForm.EmployeeInfo">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="com.taxivaxi.spoc.BookingForm.EmployeeInfo">
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimaryLight"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 1"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee1" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/one"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/employee_spinner" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignBaseline="@+id/one"
+                            android:layout_toRightOf="@+id/one"
+                            android:layout_toEndOf="@+id/one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no1"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:orientation="vertical"
+                    android:id="@+id/employee_layout2"
+                    android:background="@color/colorPrimaryLight"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 2"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee2" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/two"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/employee_spinner2"
+
+                                android:layout_width="140dp"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_alignBaseline="@+id/two"
+                            android:layout_toRightOf="@+id/two"
+                            android:layout_toEndOf="@+id/two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no2"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:orientation="vertical"
+                    android:id="@+id/employee_layout3"
+                    android:background="@color/colorPrimaryLight"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 3"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee3" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/three"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/employee_spinner3" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_alignBaseline="@+id/three"
+                            android:layout_toRightOf="@+id/three"
+                            android:layout_toEndOf="@+id/three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no3"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:id="@+id/employee_layout4"
+                    android:background="@color/colorPrimaryLight"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 4"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee4" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/four"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/employee_spinner4" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_alignBaseline="@+id/four"
+                            android:layout_toRightOf="@+id/four"
+                            android:layout_toEndOf="@+id/four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no4"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:id="@+id/employee_layout5"
+                    android:background="@color/colorPrimaryLight"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 5"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee5" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/five"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/employee_spinner5" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_alignBaseline="@+id/five"
+                            android:layout_toRightOf="@+id/five"
+                            android:layout_toEndOf="@+id/five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no5"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:elevation="@dimen/elevation"
+                    android:id="@+id/employee_layout6"
+                    android:background="@color/colorPrimaryLight"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Employee 6"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/text_size"
+                        android:padding="@dimen/padding_size"
+                        android:id="@+id/employee6" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/six"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="6dp"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/traveler_icon"/>
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/employee_spinner6" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_alignBaseline="@+id/six"
+                            android:layout_toRightOf="@+id/six"
+                            android:layout_toEndOf="@+id/six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/colorPrimaryDark"
+                                android:src="@drawable/icon_call_black"/>
+                            <EditText
+                                android:layout_marginTop="0dp"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorSecondaryText"
+                                android:hint="Enter Phone No"
+                                android:textColorHint="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_size"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/phone_no6"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="submit"
+                    android:backgroundTint="@color/colorPrimaryDark"
+
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:id="@+id/employeesubmit" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
